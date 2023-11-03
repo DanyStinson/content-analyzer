@@ -38,12 +38,12 @@ if 'new_contents' not in st.session_state:
 if 'label_text' not in st.session_state:
     st.session_state['label_text'] = None
 
-session = boto3.Session(profile_name='default')
+session = boto3.Session()
     
 s3 = session.client('s3',region_name=region)
 comprehend = session.client('comprehend',region_name=region)
 rekognition = session.client('rekognition',region_name=region)
-os.environ["AWS_PROFILE"] = "bedrock"
+#os.environ["AWS_PROFILE"] = "bedrock"
 boto3_bedrock = bedrock.get_bedrock_client(
     #endpoint_url='https://bedrock.us-east-1.amazonaws.com', #os.environ.get("BEDROCK_ENDPOINT_URL", None),
     region='us-east-1', #os.environ.get("AWS_DEFAULT_REGION", None),
