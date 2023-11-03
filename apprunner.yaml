@@ -1,0 +1,6 @@
+version: 1
+services:
+  - name: hello-world-streamlit
+    source: .
+    build_command: ""
+    start_command: "streamlit run app.py"
