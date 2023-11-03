@@ -1,2 +1,7 @@
 streamlit
-urllib3==1.26.6
+langchain
+streamlit_chat
+boto3
+matplotlib
+textract
+pypdf
